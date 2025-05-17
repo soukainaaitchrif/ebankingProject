@@ -1,16 +1,13 @@
 package ma.enset.ebankingbackend.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 import ma.enset.ebankingbackend.enums.OperationType;
 
 
 import java.util.Date;
 @Entity
-@Data @NoArgsConstructor @AllArgsConstructor
+@Data @NoArgsConstructor @AllArgsConstructor @Getter @Setter
 public class AccountOperation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,16 +1,14 @@
 package ma.enset.ebankingbackend.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import ma.enset.ebankingbackend.enums.AccountStatus;
 import java.util.Date;
 import java.util.List;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "TYPE",length = 4,discriminatorType = DiscriminatorType.STRING)
-@Data @NoArgsConstructor @AllArgsConstructor
+@Data @NoArgsConstructor @AllArgsConstructor @Getter @Setter
 public abstract class BankAccount {
     @Id
     private String id;
